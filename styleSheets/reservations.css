@@ -1,0 +1,54 @@
+/* External Style Sheet for reservations.html page
+   Author:  Sadie Sturgeon
+   Date: 	05/08/2020
+*/
+p {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    line-height: 1.5em;
+}
+form {
+    font-family: Ideal Sans, sans-serif;
+    box-shadow: 4px 4px 10px 4px silver;
+    padding: 1em;
+}
+label, input, select, fieldset, textarea {
+    margin-top: .5em;
+    margin-bottom: 1em;
+}
+fieldset {
+    border: 1px solid #000000;
+}
+legend {
+    margin-bottom: .25em;
+}
+fieldset#preferencesAllergies label {
+    margin-left: .5em;
+}
+label#preferencesDescLabel {
+    display: block;
+    margin-bottom: .5em;
+}
+input#preferencesDesc {
+    display: block;
+    width: 98%;
+    margin: 0 auto; /* centers */
+}
+textarea#textarea-accomodations {
+    display: block;
+    height: 5em;
+    width: 99%;
+}
+input[type="submit"], input[type="reset"] {
+    font-size: 1em;
+    background-color: #424242; /* dark grey */
+    color: white;
+    padding: 1em;
+    border: none;
+}
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #9e9e9e; /* light grey */
+}
+strong {
+    font-weight: bold;
+}

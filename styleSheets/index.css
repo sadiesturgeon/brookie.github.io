@@ -1,0 +1,25 @@
+/* External Style Sheet for index.html page
+   Author:  Sadie Sturgeon
+   Date: 	05/08/2020
+*/
+
+img.foodImg {
+    width: 100%;
+    opacity: 90%;
+    margin: 1em 0;
+}
+
+/* when viewport is less than or equal to 40em:
+    - reduces heading sizes
+    - adds or reduces margins or padding
+    - increases the size of links to be more "finger friendly" */
+@media screen and (max-width: 40em) {
+    main {
+        width: 100%; /* changed from 40em & 55em. Makes images fit the full width of the screen */
+        margin: 2em auto; /* changed from 4em auto; */
+    }
+    article {
+        margin: 0 1.3em; /* adds space between text and edge of screen because the
+                            width of main expands to 100% */
+    }
+}

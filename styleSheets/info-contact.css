@@ -1,0 +1,42 @@
+/* External Style Sheet for info-contact.html page
+   Author:  Sadie Sturgeon
+   Date: 	05/08/2020
+*/
+main {
+    margin: 4em auto;
+}
+main div {
+    margin: 3em 0;
+}
+img#streamImg {
+    width: 40%;
+    opacity: 90%;
+    float: right;
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
+p {
+    margin: .75em 0;
+}
+p.brookieContact {
+    font-weight: bold;
+}
+span#brookieTime {
+    font-weight: bold;
+}
+footer {
+    clear: right;
+}
+
+
+
+/* when viewport is less than or equal to 40em:
+    - reduces heading sizes
+    - adds or reduces margins or padding
+    - increases the size of links to be more "finger friendly" */
+@media screen and (max-width: 40em) {
+    main {
+        margin: 2em auto; /* changes from 4em auto to match other pages */
+    }
+
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--
+    Author: Sadie Sturgeon
+    Date: 05/08/2020
+
+    the "Join Us" page
+
+    "Brookie" illustration created by Sadie Sturgeon
+    Photos courtesey of Maxwell Wilke
+-->
+<html lang="en">
+
+<head>
+    <title>Reservations</title>
+    <meta charset="UTF-8"  />
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- necessary for responsive sizing -->
+    <link rel="stylesheet" href="styleSheets/main.css">
+    <link rel="stylesheet" href="styleSheets/reservations.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html"><img src="images/Brookie02small.png" alt="Brookie Logo"></a>
+        <h1><a href="index.html">Brookie</a></h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="info-contact.html">Info</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="farmers-gatherers.html">Farmers & Gatherers</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+            <h2>Reservations</h2>
+
+            <p>Please join us for dinner by using the following form to request a
+                reservation. If you require a party larger than 8 people, please
+                <a href="info-contact.html">contact us</a> for event planning.</p>
+
+            <form name="reservationForm" action="http://itins3.madisoncollege.edu/echo.php" method="post">
+
+                <!-- Reservation Date -->
+                <div> <!-- divs group together labels and their inputs as a block on one line -->
+                    <label for="reservationDate">Date *</label>
+                    <input type="text" id="reservationDate" name="date" placeholder="mm/dd/yyyy"
+                    pattern="([0]?[1-9]|[1][0-2])\/([0][1-9]|[1-9]|[1][0-9]|[2][0-9]|[3][0-1])\/([2][0][2][0-3])"
+                    maxlength="10" title="Please enter date mm/dd/yyyy." required>
+                    <!-- that was a fun pattern to make. accepts "1-12 (leading zero not required)/1-31 (leading zero not required)/2020-2023".
+                            for example: 2/2/2020 or 02/02/2020 both work -->
+                </div>
+
+                <!-- Reservation Time -->
+                <div>
+                    <label for="reservationTime">Time *</label>
+                    <select name="time" id="reservationTime" required>
+                        <option value="">--Select a Time--</option>
+                        <option value="5pm">5:00 pm</option>
+                        <option value="6pm">6:00 pm</option>
+                        <option value="7pm">7:00 pm</option>
+                    </select>
+                </div>
+
+                <!-- Number of Guests -->
+                <div>
+                    <label for="numGuests">Number of Guests *</label>
+                    <select name="guests" id="numGuests" required>
+                        <option value="">--Select a Number--</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </div>
+
+                <!-- Guest Name -->
+                <div>
+                    <label for="guestName">Name *</label>
+                    <input type="text" name="name" id="guestName" maxlength="50"
+                           title="Please limit to 50 characters." required>
+                </div>
+
+                <!-- Guest Phone -->
+                <div>
+                    <label for="guestPhone">Phone *</label>
+                    <input type="tel" name="phone" id="guestPhone" pattern="(\d{3}(-|\s|)\d{3}(-|\s|)\d{4})"
+                        maxlength="12" title="Please enter your 10 digit phone number." required>
+                        <!-- pattern accepts the following formats: 333-444-5555, 3334445555, 333 444 5555 -->
+                </div>
+
+                <!-- Guest Email -->
+                <div>
+                    <label for="guestEmail">Email *</label>
+                    <input type="email" name="email" id="guestEmail" maxlength="50" required>
+                </div>
+
+                <!-- Preferences or Food Allergies - Checkboxes -->
+                <fieldset id="preferencesAllergies">
+                    <legend>Preferences or Food Allergies</legend>
+                    <input type="checkbox" name="preferences01" value="Pescatarian" id="form-preferences01"><label for="form-preferences01">Pescatarian</label><br>
+                    <input type="checkbox" name="preferences02" value="Vegetarian" id="form-preferences02"><label for="form-preferences02">Vegetarian</label><br>
+                    <input type="checkbox" name="preferences03" value="Vegan" id="form-preferences03"><label for="form-preferences03">Vegan</label><br>
+                    <input type="checkbox" name="preferences04" value="Made-Without-Gluten" id="form-preferences04"><label for="form-preferences04">Made Without Gluten</label><br>
+                    <input type="checkbox" name="preferences05" value="Nut-Allergy" id="form-preferences05"><label for="form-preferences05">Nut Allergy</label><br>
+                    <input type="checkbox" name="preferences06" value="Peanut-Allergy" id="form-preferences06"><label for="form-preferences06">Peanut Allergy</label><br>
+                    <input type="checkbox" name="preferences07" value="Shellfish-Allergy" id="form-preferences07"><label for="form-preferences07">Shellfish Allergy</label><br>
+                    <input type="checkbox" name="preferences08" value="Other" id="form-preferences08"><label for="form-preferences08">Other (please explain below)</label><br>
+                    <label for="preferencesDesc" id="preferencesDescLabel">Other</label>
+                    <input type="text" name="preferencesDesc" id="preferencesDesc"
+                        maxlength="250" title="Please limit to 250 characters.">
+                    <p><small>Note: we cannot garuntee all preferences can be acommodated,
+                        but we will try our very best! We will confirm this with you when
+                        we call to confirm your reservation.</small></p>
+                </fieldset>
+
+                <!-- Alcohol or No Alcohol - Radio Buttons -->
+                <fieldset>
+                    <legend>Alcohol?</legend>
+
+                    <input type="radio" name="alcohol" value="yes" id="alcohol-yes">
+                    <label for="alcohol-yes">Yes</label>
+                    <br>
+
+                    <input type="radio" name="alcohol" value="no" id="alcohol-no">
+                    <label for="alcohol-no">No</label>
+                    <br>
+                </fieldset>
+
+                <!-- Any special accommodations needed? Textarea -->
+                <label for="textarea-accomodations">Any special accommodations needed?</label>
+                <textarea name="accomodations" maxlength="250" title="Please limit to 250 characters."
+                    id="textarea-accomodations"></textarea>
+
+                <!-- Submit Form Button -->
+                <input type="submit" value="Submit Request">
+
+                <!-- Clear Form Button -->
+                <input type="reset" value="Clear Form">
+
+            </form>
+
+            <p><strong>We will call to confirm your reservation within 48 hours.</strong></p>
+    </main>
+
+    <footer>
+        <div><a href="tel:+01-608-123-4567">608-123-4567</a></div>
+        <div>Brookie, 123 Main Street, Mt Horeb, WI, 53572</div>
+        <div><a href="mailto:info@brookie.com">info@brookie.com</a></div>
+    </footer>
+
+</body>
+
+</html>
