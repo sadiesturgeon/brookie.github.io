@@ -1,11 +1,12 @@
 # brookie.github.io
-A demo website for a small fine dining restaurant.
+A demo website for a small fine dining restaurant.<br/>
 Illustrations by Sadie Sturgeon and photos by Maxwell Wilke.
 
 Index Page: <br/>
 <img src="readmeImages/index01.png" alt="Top of Index Page - Desktop"><br/>
 <img src="readmeImages/index02.png" alt="Middle of Index Page - Desktop"><br/>
-<img src="readmeImages/index03.png" alt="Bottom of Index Page - Desktop"><br/>
+<img src="readmeImages/index03.png" alt="Middle of Index Page - Desktop"><br/>
+<img src="readmeImages/index04.png" alt="Bottom of Index Page - Desktop"><br/>
 
 Mobile Index Page:<br/>
 <img src="readmeImages/mobile01.png" alt="Top of Index Page - Mobile"><br/>
